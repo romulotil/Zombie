@@ -132,9 +132,8 @@ public class GameplayMenuActivity extends BaseGameActivity implements IOnMenuIte
 			float pMenuItemLocalX, float pMenuItemLocalY) {
 		switch(pMenuItem.getID()){
 		case GAME_1:
-			Intent myIntent = new Intent(GameplayMenuActivity.this, AccelActivity_1.class);
+			Intent myIntent = new Intent(GameplayMenuActivity.this, GamePart1.class);
 			GameplayMenuActivity.this.startActivity(myIntent);
-			//Toast.makeText(GameplayMenuActivity.this, "Accelerometer", Toast.LENGTH_SHORT).show();
 			return true;
 		case GAME_2:
 			Toast.makeText(GameplayMenuActivity.this, "AR Thing", Toast.LENGTH_SHORT).show();
