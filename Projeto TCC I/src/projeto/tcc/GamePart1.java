@@ -25,7 +25,6 @@ import org.anddev.andengine.sensor.accelerometer.AccelerometerData;
 import org.anddev.andengine.sensor.accelerometer.IAccelerometerListener;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
 
-import android.hardware.SensorManager;
 import android.widget.Toast;
 
 import com.badlogic.gdx.math.Vector2;
@@ -46,7 +45,7 @@ public class GamePart1 extends BaseGameActivity implements IAccelerometerListene
 	private int mItens = 0;
 	
 	public Engine onLoadEngine() {
-		Toast.makeText(this, "Touch to create another Slayer", Toast.LENGTH_LONG);
+		Toast.makeText(this, "Touch to create another Slayer", Toast.LENGTH_LONG).show();
 		final Camera camera = new Camera(0,0,CAMERA_WIDTH, CAMERA_HEIGHT);
 		final EngineOptions engineOptions = new EngineOptions(true, ScreenOrientation.LANDSCAPE, new RatioResolutionPolicy(CAMERA_WIDTH, CAMERA_HEIGHT), camera);
 		return new Engine(engineOptions);
