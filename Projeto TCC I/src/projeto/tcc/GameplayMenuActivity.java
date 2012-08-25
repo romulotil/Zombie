@@ -132,7 +132,7 @@ public class GameplayMenuActivity extends BaseGameActivity implements IOnMenuIte
 			float pMenuItemLocalX, float pMenuItemLocalY) {
 		switch(pMenuItem.getID()){
 		case GAME_1:
-			Intent myIntent = new Intent(GameplayMenuActivity.this, GamePart1.class);
+			Intent myIntent = new Intent(GameplayMenuActivity.this, Gameplay1_tests.class);
 			GameplayMenuActivity.this.startActivity(myIntent);
 			return true;
 		case GAME_2:
