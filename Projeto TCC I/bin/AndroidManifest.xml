@@ -23,7 +23,7 @@
         </activity>
         <activity android:name=".MainMenuActivity"></activity>
         <activity android:name=".GameplayMenuActivity"></activity>
-        <activity android:name=".Gameplay1_tests"></activity>
+        <activity android:name=".game1.Gameplay1_tests"></activity>
     </application>
 
 </manifest>

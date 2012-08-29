@@ -23,6 +23,8 @@ import org.anddev.andengine.opengl.texture.region.TextureRegion;
 import org.anddev.andengine.opengl.texture.region.TextureRegionFactory;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
 
+import projeto.tcc.game1.Gameplay1_tests;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.widget.Toast;

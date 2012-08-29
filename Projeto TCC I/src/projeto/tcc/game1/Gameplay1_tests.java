@@ -1,4 +1,4 @@
-package projeto.tcc;
+package projeto.tcc.game1;
 
 import java.util.Arrays;
 
@@ -13,11 +13,17 @@ import org.anddev.andengine.entity.modifier.SequenceEntityModifier;
 import org.anddev.andengine.entity.scene.Scene;
 import org.anddev.andengine.entity.sprite.AnimatedSprite;
 import org.anddev.andengine.entity.util.FPSLogger;
+import org.anddev.andengine.extension.physics.box2d.PhysicsWorld;
+import org.anddev.andengine.extension.physics.box2d.util.Vector2Pool;
 import org.anddev.andengine.opengl.texture.Texture;
 import org.anddev.andengine.opengl.texture.TextureOptions;
 import org.anddev.andengine.opengl.texture.region.TextureRegionFactory;
 import org.anddev.andengine.opengl.texture.region.TiledTextureRegion;
+import org.anddev.andengine.sensor.accelerometer.AccelerometerData;
+import org.anddev.andengine.sensor.accelerometer.IAccelerometerListener;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
+
+import com.badlogic.gdx.math.Vector2;
 
 import android.os.Handler;
 
@@ -41,8 +47,7 @@ public class Gameplay1_tests extends BaseGameActivity{
 						CAMERA_HEIGHT),this.mCamera));
 	}
 
-	public void onLoadResources() {
-		
+	public void onLoadResources() {		
 		mSlayerTexture = new Texture(256, 512, TextureOptions.DEFAULT);
 		mTileSlayerTexture = TextureRegionFactory.createTiledFromAsset(this.mSlayerTexture, this, "gfx/slayer1.png", 0,0,2,2);
 		mEngine.getTextureManager().loadTexture(this.mSlayerTexture);		
