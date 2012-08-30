@@ -23,6 +23,7 @@ import org.anddev.andengine.opengl.texture.region.TextureRegion;
 import org.anddev.andengine.opengl.texture.region.TextureRegionFactory;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
 
+import projeto.tcc.game1.Gameplay1_test2;
 import projeto.tcc.game1.Gameplay1_tests;
 
 import android.content.Intent;
@@ -98,19 +99,19 @@ public class GameplayMenuActivity extends BaseGameActivity implements IOnMenuIte
 	private void createStaticMenuScene() {
 		this.mStaticMenuScene = new MenuScene(this.mCamera);
 		final IMenuItem game1MenuItem = new ColorMenuItemDecorator(
-				new TextMenuItem(GAME_1, mFont, "Gameplay 1 - Accel."),
+				new TextMenuItem(GAME_1, mFont, "Game 1 - Accel."),
 				0.5f, 0.5f, 0.5f, 1.0f, 1.0f, 0.0f);
 		game1MenuItem.setBlendFunction(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
 		this.mStaticMenuScene.addMenuItem(game1MenuItem);
 		
 		final IMenuItem game2MenuItem = new ColorMenuItemDecorator(
-				new TextMenuItem(GAME_2, mFont, "Gameplay 2 - AR"),
+				new TextMenuItem(GAME_2, mFont, "Game 2 - AR"),
 				0.5f, 0.5f, 0.5f, 1.0f, 0.5f, 0.0f);
 		game2MenuItem.setBlendFunction(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
 		this.mStaticMenuScene.addMenuItem(game2MenuItem);
 		
 		final IMenuItem game3MenuItem = new ColorMenuItemDecorator(
-				new TextMenuItem(GAME_3, mFont, "Gameplay 3 - no idea"),
+				new TextMenuItem(GAME_3, mFont, "Game 3 - no idea"),
 				0.5f, 0.5f, 0.5f, 1.0f, 0.75f, 0.0f);
 		game3MenuItem.setBlendFunction(GL10.GL_SRC_ALPHA, GL10.GL_ONE_MINUS_SRC_ALPHA);
 		this.mStaticMenuScene.addMenuItem(game3MenuItem);	
@@ -134,11 +135,12 @@ public class GameplayMenuActivity extends BaseGameActivity implements IOnMenuIte
 			float pMenuItemLocalX, float pMenuItemLocalY) {
 		switch(pMenuItem.getID()){
 		case GAME_1:
-			Intent myIntent = new Intent(GameplayMenuActivity.this, Gameplay1_tests.class);
+			Intent myIntent = new Intent(GameplayMenuActivity.this, Gameplay1_test2.class);
 			GameplayMenuActivity.this.startActivity(myIntent);
 			return true;
 		case GAME_2:
-			Toast.makeText(GameplayMenuActivity.this, "AR Thing", Toast.LENGTH_SHORT).show();
+			Intent myIntent2 = new Intent(GameplayMenuActivity.this, Gameplay1_tests.class);
+			GameplayMenuActivity.this.startActivity(myIntent2);
 			return true;
 		case GAME_3:
 			Toast.makeText(GameplayMenuActivity.this, "No Idea Yet", Toast.LENGTH_SHORT).show();

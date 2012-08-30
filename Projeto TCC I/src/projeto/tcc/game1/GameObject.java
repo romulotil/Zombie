@@ -1,19 +1,19 @@
 package projeto.tcc.game1;
 
-import org.anddev.andengine.engine.handler.physics.PhysicsHandler;
-import org.anddev.andengine.entity.sprite.AnimatedSprite;
-import org.anddev.andengine.opengl.texture.region.TiledTextureRegion;
-import org.anddev.andengine.opengl.vertex.RectangleVertexBuffer;
+import org.andengine.engine.handler.physics.PhysicsHandler;
+import org.andengine.entity.sprite.AnimatedSprite;
+import org.andengine.opengl.texture.region.ITiledTextureRegion;
+import org.andengine.opengl.vbo.VertexBufferObjectManager;
 
 public abstract class GameObject extends AnimatedSprite {
 
-	public GameObject(float pX, float pY, TiledTextureRegion pTiledTextureRegion, RectangleVertexBuffer pRectangleVertexBuffer) {
-		super(pX, pY, pTiledTextureRegion, pRectangleVertexBuffer);
-		this.mPhysicsHandler = new PhysicsHandler(this);
-        this.registerUpdateHandler(this.mPhysicsHandler);
-	}
-
 	public PhysicsHandler mPhysicsHandler;
+	
+	public GameObject(final float pX, final float pY, final ITiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager) {
+        super(pX, pY, pTiledTextureRegion, pVertexBufferObjectManager);
+        this.mPhysicsHandler = new PhysicsHandler(this);
+        this.registerUpdateHandler(this.mPhysicsHandler);
+    }	
 	
 	@Override
     protected void onManagedUpdate(float pSecondsElapsed) {

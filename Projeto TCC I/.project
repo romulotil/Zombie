@@ -3,6 +3,7 @@
 	<name>Projeto TCC I</name>
 	<comment></comment>
 	<projects>
+		<project>AndEngine</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

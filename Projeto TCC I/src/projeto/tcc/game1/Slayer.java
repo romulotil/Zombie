@@ -1,15 +1,13 @@
 package projeto.tcc.game1;
 
-import org.anddev.andengine.opengl.texture.region.TiledTextureRegion;
-import org.anddev.andengine.opengl.vertex.RectangleVertexBuffer;
+import org.andengine.opengl.texture.region.TiledTextureRegion;
+import org.andengine.opengl.vbo.VertexBufferObjectManager;
 
 public class Slayer extends GameObject{
 
-	public Slayer(float pX, float pY, TiledTextureRegion pTiledTextureRegion,
-			RectangleVertexBuffer pRectangleVertexBuffer) {
-		super(pX, pY, pTiledTextureRegion, pRectangleVertexBuffer);
-		// TODO Auto-generated constructor stub
-	}
+	public Slayer(final float pX, final float pY, final TiledTextureRegion pTiledTextureRegion, final VertexBufferObjectManager pVertexBufferObjectManager) {
+        super(pX, pY, pTiledTextureRegion, pVertexBufferObjectManager);
+    }
 
 	@Override
     public void move() {
