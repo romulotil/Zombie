@@ -141,7 +141,7 @@ public class GameplayMenuActivity extends BaseGameActivity implements IOnMenuIte
 			Toast.makeText(GameplayMenuActivity.this, "No Idea Yet", Toast.LENGTH_SHORT).show();
 			return true;
 		case GAME_3:
-			Intent myIntent = new Intent(GameplayMenuActivity.this, Gameplay3_test2.class);
+			Intent myIntent = new Intent(GameplayMenuActivity.this, VampiresInBackyard.class);
 			GameplayMenuActivity.this.startActivity(myIntent);
 			return true;
 		case BACK:

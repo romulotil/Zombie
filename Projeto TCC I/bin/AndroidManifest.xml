@@ -29,6 +29,7 @@
         <activity android:name=".game1.Gameplay1_tests"></activity>
         <activity android:name=".game3.Gameplay3_test1"></activity>
         <activity android:name=".game3.Gameplay3_test2"></activity>
+        <activity android:name=".game3.VampiresInBackyard"></activity>
     </application>
 
 </manifest>
