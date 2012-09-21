@@ -44,7 +44,7 @@ public class Gameplay1_tests extends BaseGameActivity{
 
 	public void onLoadResources() {		
 		mSlayerTexture = new Texture(256, 512, TextureOptions.DEFAULT);
-		mTileSlayerTexture = TextureRegionFactory.createTiledFromAsset(this.mSlayerTexture, this, "gfx/slayer1.png", 0,0,2,2);
+		mTileSlayerTexture = TextureRegionFactory.createTiledFromAsset(this.mSlayerTexture, this, "gfx/Sprites/slayer1.png", 0,0,2,2);
 		mEngine.getTextureManager().loadTexture(this.mSlayerTexture);		
 	}
 
@@ -70,7 +70,7 @@ public class Gameplay1_tests extends BaseGameActivity{
 			mSlayer[0].animate(frameDuration, 0, 1, true);
 			mSlayer[0].registerEntityModifier(new SequenceEntityModifier(
 					new AlphaModifier(0.5f, 0.0f, 1.0f),
-					new MoveModifier(60.0f,  
+					new MoveModifier(10.0f, 
 							mSlayer[0].getX(), 3000.0f,
 							100.0f, 100.0f)));
 					 
