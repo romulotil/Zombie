@@ -23,7 +23,6 @@ import org.anddev.andengine.opengl.texture.region.TextureRegion;
 import org.anddev.andengine.opengl.texture.region.TextureRegionFactory;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
 
-import projeto.tcc.game1.*;
 import projeto.tcc.game3.*;
 
 import android.content.Intent;
